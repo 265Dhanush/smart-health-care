@@ -8,17 +8,38 @@
 
     <style>
         .custom-grid-box {
-      background-color: #f0f0f0;
-      border: 1px solid #0f0e0e;
+      background-color: #edede9;
+      /* border: 1px solid #ccc; */
       padding: 20px;
       text-align: center;
-      
+      /* margin-bottom: 20px; Adding margin to the bottom */
     }
-
     .custom-grid-box img {
       max-width: 100%;
       height: auto;
     }
+    /* Center the content vertically within the grid box */
+    .d-flex.align-items-center {
+      height: 100%;
+    }
+    /* Center the text horizontally within the grid box */
+    .custom-grid-box .centered-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; /* Ensure the text is vertically centered */
+    }
+
+    .custom-grid-box .iot_reading{
+        align-items: center;
+    }
+    .head{
+        background-color: #d6ccc2;
+    }
+    
+    body{background-color: #d5bdaf;}
+
+    
 
 
 
@@ -30,30 +51,80 @@
 
 </head>
 <body>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
+    <nav class="navbar bg-body-tertiary ">
+        <div class="container-fluid head">
           <span class="navbar-brand mb-0 h1">Smart Health Care</span>
         </div>
       </nav>
 
     <div class="container text-center">
-        <h3>Patient Dashboard</h3>
+        <div class="title mt-4 mb-4">
+            <h3>Patient Dashboard</h3>
 
+        </div>
+        
         <div class="container text-center  ">
             <div class="row ">
-                <div class="col-md-6 custom-grid-box">
-                    <img src="https://i.pinimg.com/originals/1d/4c/ad/1d4cad17fefb5a5f075a09e310bb4f7b.jpg" alt="Image">
+                <div class="col-md-6 custom-grid-box mr-md-3">
+                    <img src="https://intelligentproduct.solutions/wp-content/uploads/IoT-in-Healthcare-2020.jpg" alt="Image">
                 </div>
-                <div class="col-md-6 custom-grid-box">
-                  Box 2
+                <div class="col-md-6 custom-grid-box ">
+                    <div class="centered-text"><h4>“It is health that is real wealth and not pieces of gold and silver.”</h4></div>
+                  
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-6 custom-grid-box">
-                  Box 3
+                <div class="col-md-6 custom-grid-box mb-5">
+                    <div class="iot_reading">
+                        <h6>Enter the Reading:</h6>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" id="text" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="col">
+                            <input type="number" id="numericInput" class="form-control" placeholder="Enter your Age">
+                        </div>
+                      </div>
+                    
+                    <div class="row">
+                        <div class="col">
+                            <input type="number" id="numericInput" class="form-control" placeholder="Enter a number">
+                        </div>
+                        <div class="col">
+                            <input type="number" id="numericInput" class="form-control" placeholder="Enter a number">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                            <input type="number" id="numericInput" class="form-control" placeholder="Enter a number">
+                        </div>
+                        <div class="col">
+                            <input type="number" id="numericInput" class="form-control" placeholder="Enter a number">
+                        </div>
+                      </div>
+                      <input class="btn btn-primary mt-4" type="submit" value="Submit">  
                 </div>
-                <div class="col-md-6 custom-grid-box">
-                  <img src="https://owh-inc.com/wp-content/uploads/2016/11/16F_room_view-1024x768.jpg">
+                <div class="col-md-6 custom-grid-box mb-5">
+                    <div class="iot_reading mb-2">
+                        <h6>Prescription:</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" id="text" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="col">
+                            <input type="number" id="numericInput" class="form-control" placeholder="Enter your Age">
+                        </div>
+                        <div class="col">
+                            <input class="btn btn-primary " type="submit" value="Submit">
+                        </div>
+                      </div>
+
+                    
+
+
                 </div>
               </div>
           </div>
