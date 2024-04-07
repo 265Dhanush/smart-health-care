@@ -78,35 +78,38 @@
                     <div class="iot_reading">
                         <h6>Enter the Reading:</h6>
                     </div>
+                  
+                  <form action="/submit" method='post'>
 
                     <div class="row">
                         <div class="col">
-                            <input type="text" id="text" class="form-control" placeholder="Enter your name">
+                            <input type="text"  name="name"  id="text" class="form-control" placeholder="Enter your name">
                         </div>
                         <div class="col">
-                            <input type="number" id="numericInput" class="form-control" placeholder="Enter your Age">
+                            <input type="number" name="age" id="numericInput" class="form-control" placeholder="Enter your Age">
                         </div>
                       </div>
                     
                     <div class="row">
                         <div class="col">
-                            <input type="number" id="numericInput" class="form-control" placeholder="Enter Room Temperature">
+                            <input type="number" name="room_temperature"  id="numericInput" class="form-control" placeholder="Enter Room Temperature">
                         </div>
                         <div class="col">
-                            <input type="number" id="numericInput" class="form-control" placeholder="Enter Room Humidity">
+                            <input type="number" name="room_humidity" id="numericInput" class="form-control" placeholder="Enter Room Humidity">
                         </div>
                       </div>
                       <div class="row">
                         <div class="col">
-                            <input type="number" id="numericInput" class="form-control" placeholder="Enter Heart Rate">
+                            <input type="number" name="heart_rate" id="numericInput" class="form-control" placeholder="Enter Heart Rate">
                         </div>
                         <div class="col">
-                            <input type="number" id="numericInput" class="form-control" placeholder="Enter Body Temperature">
+                            <input type="number" name="body_temperature" id="numericInput" class="form-control" placeholder="Enter Body Temperature">
                         </div>
                       </div>
-                      <input class="btn btn-primary mt-4" type="submit" value="Submit">  
+                      <button class="btn btn-primary mt-4" type="submit"  href="/">Submit</button>  
                 </div>
-                <div class="col-md-6 custom-grid-box mb-5">
+                </form>
+                <!-- <div class="col-md-6 custom-grid-box mb-5">
                     <div class="iot_reading mb-2">
                         <h6>Prescription:</h6>
                     </div>
@@ -120,7 +123,7 @@
                         <div class="col">
                             <input class="btn btn-primary " type="submit" value="View">
                         </div>
-                      </div>
+                      </div> -->
 
                     
 

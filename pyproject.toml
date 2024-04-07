@@ -9,6 +9,9 @@ packages = [{include = "repl_nix_smart_health_care"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 flask = "^3.0.2"
+sqlalchemy = "^2.0.29"
+mysql-connector-python = "^8.3.0"
+pandas = "^2.2.1"
 
 
 [build-system]
