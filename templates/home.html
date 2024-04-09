@@ -89,6 +89,16 @@
                             <input type="number" name="age" id="numericInput" class="form-control" placeholder="Enter your Age">
                         </div>
                       </div>
+
+                    <div class="row">
+                      <div class="col">
+                        <input type="date" name="date" id="date" class="form-control" placeholder="Enter date" value="<?php echo date('Y-m-d'); ?>" required>
+
+                      </div>
+                      <div class="col">
+                        <input type="time" name="time" id="time" class="form-control" placeholder="Enter time" value="<?php echo date('H:i'); ?>" required>
+                      </div>
+                    </div>
                     
                     <div class="row">
                         <div class="col">
@@ -100,7 +110,7 @@
                       </div>
                       <div class="row">
                         <div class="col">
-                            <input type="number" name="heart_rate" id="numericInput" class="form-control" placeholder="Enter Heart Rate">
+                            <input type="number" name="pulse_rate" id="numericInput" class="form-control" placeholder="Enter pulse Rate">
                         </div>
                         <div class="col">
                             <input type="number" name="body_temperature" id="numericInput" class="form-control" placeholder="Enter Body Temperature">
