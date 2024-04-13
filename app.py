@@ -8,6 +8,22 @@ app = Flask(__name__)
 
 
 @app.route('/')
+def home():
+    return render_template('home.html')
+
+@app.route('/bmi')
+def bmi():
+    return render_template('bmi.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+
+
+
+@app.route('/')
 def hello_world():
   patients = load_db()
   return render_template('home.html',
