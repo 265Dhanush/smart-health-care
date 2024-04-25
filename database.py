@@ -10,34 +10,8 @@ mydb = mysql.connector.connect(
     database="patient_database")
 
 
-def load_db():
-  #Get data
-  sql = "SELECT * FROM tablets;"
-  mycursor = mydb.cursor()
-  mycursor.execute(sql)
-  myresult = mycursor.fetchall()
 
-  # Define a function to convert tuples to dictionaries
-  def tuple_to_dict(cursor, row):
-    return dict(zip(cursor.column_names, row))
-
-  # Convert the result into a list of dictionaries
-  myresult_dict = [tuple_to_dict(mycursor, row) for row in myresult]
-  return myresult_dict
   
 
 
-# #Get data
-# sql = "SELECT * FROM tablets;"
-# mycursor = mydb.cursor()
-# mycursor.execute(sql)
-# myresult = mycursor.fetchall()
 
-# # Define a function to convert tuples to dictionaries
-# def tuple_to_dict(cursor, row):
-#     return dict(zip(cursor.column_names, row))
-
-# # Convert the result into a list of dictionaries
-# myresult_dict = [tuple_to_dict(mycursor, row) for row in myresult]
-
-# print(myresult_dict)
