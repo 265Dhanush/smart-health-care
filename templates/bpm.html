@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average BPM Calculator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  input[type="number"] {
+    width: 80px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  button {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  #result {
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+<h2>Average BPM Calculator</h2>
+<p>Enter at least 10 BPM readings and click "Calculate" to get the average BPM:</p>
+<div id="inputs"></div>
+<button onclick="addInput()">Add BPM Reading</button>
+<button onclick="calculateAverage()">Calculate Average BPM</button>
+<div id="result"></div>
+
+<script>
+var readings = [];
+
+function addInput() {
+  var input = document.createElement("input");
+  input.type = "number";
+  input.placeholder = "BPM";
+  document.getElementById("inputs").appendChild(input);
+  readings.push(input);
+}
+
+function calculateAverage() {
+  var totalBPM = 0;
+  var count = 0;
+  
+  for (var i = 0; i < readings.length; i++) {
+    if (readings[i].value !== "") {
+      totalBPM += parseFloat(readings[i].value);
+      count++;
+    }
+  }
+  
+  if (count < 10) {
+    alert("Please enter at least 10 BPM readings.");
+    return;
+  }
+  
+  var averageBPM = totalBPM / count;
+  document.getElementById("result").innerHTML = "Average BPM: " + averageBPM.toFixed(2);
+}
+</script>
+</body>
+</html>

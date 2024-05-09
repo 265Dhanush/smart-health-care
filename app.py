@@ -20,6 +20,11 @@ def bmi():
   return render_template('bmi.html')
 
 
+@app.route('/bpm')
+def bpm():
+  return render_template('bpm.html')
+
+
 @app.route('/about')
 def about():
   return render_template('about.html')
